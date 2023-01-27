@@ -19,6 +19,6 @@ event를 발생시킬 대상을 찾기 힘들다면 일단 무조건 console.dir
 ##### Day 2
 - **classList(add, remove)**<br>
 size별로 세 가지로 나누어서 css에 미리 background color를 설정해두었다. width에 맞는 color class를 add하고, 나머지 class는 remove해주면 됨. remove 필수! element를 확인하면서 코딩하자<br>
--**function**<br>
+- **function**<br>
 중복된 내용이 있으면 function을 만들어서 코드 길이를 줄이자. string도 ""와 문자를 계속 작성하기 번거롭기 때문에 const로 상수를 설정해두자.<br><br>
 *내가 했던 실수: 사실 classList를 아예 생각도 못함.. body의 background-color에 접근해서 수정하려고 했다. 유혹을 뿌리치지 못하고 hint를 확인했다가 아하.. 하고 classList로 수정. js에서 작성하기 전에 이게 맞나 헷갈리면 무조건 출력해보고 css에 임의적으로 작성하여 확인해보기! 그럼 쉽게 알 수 있다.*<br>
