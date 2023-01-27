@@ -17,27 +17,26 @@ const h2 = document.querySelector("h2");
 
 const superEventHandler = {
 
-  mouseEnterEvent: function (event) {
-    event.target.innerText = "The mouse is here!";
-    event.target.style.color = colors[0];
+  mouseEnterEvent: function () {
+    h2.innerText = "The mouse is here!";
+    h2.style.color = colors[0];
   },
 
-  mouseLeaveEvent: function (event) {
-    event.target.innerText = "The mouse is gone!";
-    event.target.style.color = colors[1];
+  mouseLeaveEvent: function () {
+    h2.innerText = "The mouse is gone!";
+    h2.style.color = colors[1];
   },
 
-  resizeEvent: function (event) {
-    const h2 = event.currentTarget.document.body.querySelector("h2");
+  resizeEvent: function () {
     h2.innerText = "You just resized!";
     h2.style.color = colors[2];
   },
 
-  contextMenuEvent: function (event) {
-    const h2 = event.target.querySelector("h2");
+  contextMenuEvent: function () {
     h2.innerText = "That was a right click!";
     h2.style.color = colors[4];
   },
+
 };
 
 h2.addEventListener('mouseenter', superEventHandler.mouseEnterEvent);
