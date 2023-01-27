@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+}
+
+h2 {
+  color: #fff;
+}
+
+.phone {
+  background-color: #1565c0;
+}
+
+.pad {
+  background-color: #7b1fa2;
+}
+
+.computer {
+  background-color: #fbc02d;
+}
