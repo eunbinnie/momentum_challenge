@@ -22,3 +22,16 @@ size별로 세 가지로 나누어서 css에 미리 background color를 설정�
 - **function**<br>
 중복된 내용이 있으면 function을 만들어서 코드 길이를 줄이자. string도 ""와 문자를 계속 작성하기 번거롭기 때문에 const로 상수를 설정해두자.<br><br>
 *내가 했던 실수: 사실 classList를 아예 생각도 못함.. body의 background-color에 접근해서 수정하려고 했다. 유혹을 뿌리치지 못하고 hint를 확인했다가 아하.. 하고 classList로 수정. js에서 작성하기 전에 이게 맞나 헷갈리면 무조건 출력해보고 css에 임의적으로 작성하여 확인해보기! 그럼 쉽게 알 수 있다.*<br>
+
+***
+##### Random Number Game
+- **JS에서 html new element 만들기**<br>
+**1. document.createElement('element tag')**
+우선 새로 만들 tag명을 document.createElement('') 안에 적어준다. 만약 h1 태그를 새로 생성하고 싶다면 let h1 = document.createElement('h1'); 이렇게!<br>
+**2. appendChild vs prependChild**
+tag를 생성했으면 이제 html 내부에 삽입을 해주어야 하는데, 이때 사용하는 두 가지 방법이다. appendChild는 부모 요소의 제일 하단에 해당 태그를 삽입하고, prependChild는 부모 요소의 제일 상단에 해당 태그를 삽입해준다.<br><br>
+만약 body 제일 하단에 삽입하고 싶다면, document.body.appendChild(h1) 이렇게 하면 됨. (여기에서 h1은 document.createElement('h1')을 뜻 함. 1번에 적었음)<br>
+**3. 반올림 vs 올림 vs 내림**
+*Math.round():* 반올림
+*Math.ceil():* 올림
+*Math.floor():* 내림
