@@ -26,12 +26,12 @@ size별로 세 가지로 나누어서 css에 미리 background color를 설정�
 ***
 ##### Random Number Game
 - **JS에서 html new element 만들기**<br>
-**1. document.createElement('element tag')**
+**1. document.createElement('element tag')**<br>
 우선 새로 만들 tag명을 document.createElement('') 안에 적어준다. 만약 h1 태그를 새로 생성하고 싶다면 let h1 = document.createElement('h1'); 이렇게!<br>
-**2. appendChild vs prependChild**
+**2. appendChild vs prependChild**<br>
 tag를 생성했으면 이제 html 내부에 삽입을 해주어야 하는데, 이때 사용하는 두 가지 방법이다. appendChild는 부모 요소의 제일 하단에 해당 태그를 삽입하고, prependChild는 부모 요소의 제일 상단에 해당 태그를 삽입해준다.<br><br>
-만약 body 제일 하단에 삽입하고 싶다면, document.body.appendChild(h1) 이렇게 하면 됨. (여기에서 h1은 document.createElement('h1')을 뜻 함. 1번에 적었음)<br>
-**3. 반올림 vs 올림 vs 내림**
-*Math.round():* 반올림
-*Math.ceil():* 올림
-*Math.floor():* 내림
+만약 body 제일 하단에 삽입하고 싶다면, document.body.appendChild(h1) 이렇게 하면 됨.<br>(여기에서 h1은 document.createElement('h1')을 뜻 함. 1번에 적었음)<br>
+**3. 반올림 vs 올림 vs 내림**<br>
+*Math.round():* 반올림<br>
+*Math.ceil():* 올림<br>
+*Math.floor():* 내림<br>
