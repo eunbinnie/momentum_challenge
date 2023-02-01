@@ -35,3 +35,27 @@ tag를 생성했으면 이제 html 내부에 삽입을 해주어야 하는데, �
 *Math.round():* 반올림<br>
 *Math.ceil():* 올림<br>
 *Math.floor():* 내림<br>
+
+***
+##### Until Christmas
+- **목표 날짜 설정**<br>
+d-day를 계산할 날짜는 새로운 변수에 new Date("") 안에 날짜를 작성하면 된다. 만약 2023년 크리스마스까지의 디데이를 계산하고자 한다면, new Date("2023-12-25 00:00:00") 이렇게 작성하면 됨!<br><br>
+그 후 오늘 날짜를 빼주고, 저렇게 나눠주면 됨<br><br>
+```js
+const christmas = new Date("2023-12-25 00:00:00")
+  const today = new Date();
+  const dDay = christmas - today;
+
+  const date = String(Math.floor(dDay / (1000 * 60 * 60 * 24))).padStart(3, "00");
+  const hours = String(Math.floor((dDay / (1000 * 60 * 60)) % 24)).padStart(2, "0");
+  const minutes = String(Math.floor((dDay / (1000 * 60)) % 60)).padStart(2, "0");
+  const seconds = String(Math.floor(dDay / 1000 % 60)).padStart(2, "0");
+```
+<br><br>
+
+- **숫자 빈 공간 채우기**<br>
+4d 3m이 아닌 004d 03m으로 빈 공간을 0으로 채우고 싶다면 padStart()를 사용하면 된다. padStart()를 사용하려면 자료형을 string으로 바꿔주어야 한다. 따라서 String()으로 감싼 후 사용하기! padStart()는 매개변수를 2개 받는데, 첫 번째 매개변수는 문자열의 크기 즉 몇 글자가 되도록 빈 공간을 채울 것인지 작성하면 된다. 예를 들어, 시간의 경우 가장 큰 숫자가 24이므로 두 자리수로 채울 것이므로 첫번째 매개변수를 2로 작성하면 된다. 두 번째 매개변수는 빈 공간을 무슨 문자열로 채울 것인지 작성하면 된다. 이 예제에서는 빈 공간을 0으로 채울 것이기 때문에 시간의 경우 "0"으로 작성, 며칠 남았는지에 경우는 "00"으로 작성하면 된다.<br><br>
+만약 첫 시작에 빈공간을 채우는 것이 아닌, 마지막 부분에 빈 공간을 채우고 싶다면 padEnd()를 사용하면 된다.<br><br>
+
+- **setInterval()**
+setInterval()은 어떤 함수를 몇ms 간격으로 출력할 지 정하는 함수이다. 이 함수 또한 2개의 매개변수를 갖는데, 첫번째 매개변수는 실행할 함수이고 두 번째 매개변수는 ms이다. 시간을 초 단위로 출력해야 하므로 두번째 매개변수는 1000으로 작성하면 된다.(ms단위로 작성한다. 1초 === 1000ms) 페이지를 새로고침한 후 1초 후에 함수가 실행되므로 임의적으로 함수를 한 번 실행한 후 setInterval() 함수를 실행하면 된다.<br><br>
